@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "version": 4,
-  "generatedAt": "2026-07-24T09:48:25.582Z",
+  "version": 5,
+  "generatedAt": "2026-07-24T10:01:00.161Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
   "meta": {
@@ -40,10 +40,7 @@
       "label": "20 Eyl",
       "full": "20 Eylül 2026",
       "weekday": "Pazar",
-      "tracks": [
-        "A",
-        "B"
-      ]
+      "tracks": []
     }
   ],
   "tracks": {
@@ -687,7 +684,7 @@
     },
     {
       "id": "d3b1",
-      "day": 3,
+      "day": 2,
       "track": "B",
       "start": "09:00",
       "end": "10:00",
@@ -702,7 +699,7 @@
     },
     {
       "id": "d3b2",
-      "day": 3,
+      "day": 2,
       "track": "B",
       "start": "10:00",
       "end": "11:00",
@@ -717,7 +714,7 @@
     },
     {
       "id": "d3b3",
-      "day": 3,
+      "day": 2,
       "track": "B",
       "start": "11:00",
       "end": "12:00",
@@ -731,17 +728,8 @@
       "talks": []
     },
     {
-      "id": "d3lb",
-      "day": 3,
-      "track": "B",
-      "start": "12:00",
-      "end": "13:00",
-      "kind": "lunch",
-      "title": "Öğle Yemeği"
-    },
-    {
       "id": "d3b4",
-      "day": 3,
+      "day": 2,
       "track": "B",
       "start": "13:00",
       "end": "14:00",
@@ -756,7 +744,7 @@
     },
     {
       "id": "d3b5",
-      "day": 3,
+      "day": 2,
       "track": "B",
       "start": "14:00",
       "end": "15:00",
@@ -771,7 +759,7 @@
     },
     {
       "id": "d3b6",
-      "day": 3,
+      "day": 2,
       "track": "B",
       "start": "15:00",
       "end": "16:00",
