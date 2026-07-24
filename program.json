@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "version": 3,
-  "generatedAt": "2026-07-24T05:20:25.498Z",
+  "version": 4,
+  "generatedAt": "2026-07-24T09:48:25.582Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
   "meta": {
@@ -150,7 +150,7 @@
         {
           "time": "15.15–15.35",
           "title": "Çocuklarda Ağır Eozinofilik Astımda Mepolizumab Tedavisi",
-          "sp": "Doç. Dr. Ayşegül Ertugrul"
+          "sp": "Doç. Dr. Ayşegül Ertuğrul"
         },
         {
           "time": "15.35–15.45",
@@ -193,11 +193,11 @@
       "day": 1,
       "track": "ato",
       "start": "13:30",
-      "end": "18:00",
+      "end": "17:00",
       "kind": "workshop",
       "room": "Atölye 1",
       "title": "Herediter Anjiyoödem Tanı ve Tedavi Atölyesi",
-      "note": "Rotasyonlu · 13.30, 14.45 ve 16.00 seanslarında tekrarlanır. Katılımcılar üç gruba ayrılır, her seans sonunda salon değişir.",
+      "note": "Her atölye bir saat sürer. Katılımcılar üç gruba ayrılır, her atölye sonunda salon değişir; aralarda 15 dk kahve molası verilir. Üç dönem: 13.30–14.30, 14.45–15.45, 16.00–17.00.",
       "chairsLabel": "Moderatörler",
       "chairs": [
         "Prof. Dr. Ebru Arık Yılmaz",
@@ -224,11 +224,11 @@
       "day": 1,
       "track": "ato",
       "start": "13:30",
-      "end": "18:00",
+      "end": "17:00",
       "kind": "workshop",
       "room": "Atölye 2",
       "title": "İmmünoglobulin Uygulamaları Atölyesi",
-      "note": "Rotasyonlu · 13.30, 14.45 ve 16.00 seanslarında tekrarlanır. Katılımcılar üç gruba ayrılır, her seans sonunda salon değişir.",
+      "note": "Her atölye bir saat sürer. Katılımcılar üç gruba ayrılır, her atölye sonunda salon değişir; aralarda 15 dk kahve molası verilir. Üç dönem: 13.30–14.30, 14.45–15.45, 16.00–17.00.",
       "chairsLabel": "Moderatörler",
       "chairs": [
         "Doç. Dr. Esra Yücel",
@@ -253,11 +253,11 @@
       "day": 1,
       "track": "ato",
       "start": "13:30",
-      "end": "18:00",
+      "end": "17:00",
       "kind": "workshop",
       "room": "Atölye 3",
       "title": "Bileşene Dayalı Test Yorumlama Atölyesi",
-      "note": "Rotasyonlu · 13.30, 14.45 ve 16.00 seanslarında tekrarlanır. Katılımcılar üç gruba ayrılır, her seans sonunda salon değişir.",
+      "note": "Her atölye bir saat sürer. Katılımcılar üç gruba ayrılır, her atölye sonunda salon değişir; aralarda 15 dk kahve molası verilir. Üç dönem: 13.30–14.30, 14.45–15.45, 16.00–17.00.",
       "chairsLabel": "Moderatörler",
       "chairs": [
         "Prof. Dr. Cevdet Özdemir",
@@ -336,7 +336,7 @@
       "start": "09:00",
       "end": "10:00",
       "kind": "session",
-      "title": "[UZAK GÜNCELLEME] Besin Alerjilerinde Yeni Ufuklar",
+      "title": "Besin Alerjilerinde Yeni Ufuklar",
       "chairsLabel": "Oturum Başkanları",
       "chairs": [
         "Prof. Dr. Esen Demir",
@@ -442,7 +442,7 @@
         },
         {
           "time": "",
-          "title": "Enfeksiyon Dışı Prezantasyonlar",
+          "title": "Enfeksiyon Dışı Prezentasyonlar",
           "sp": "Uzm. Dr. Zeynep Meriç"
         },
         {
@@ -505,7 +505,7 @@
         {
           "time": "",
           "title": "Besin Alerjisinde Zor Olgu Örnekleri",
-          "sp": "Uzm. Dr. İsmail Ozanlı"
+          "sp": "Uzm. Dr. Gizem Uslu"
         },
         {
           "time": "",
