@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "version": 7,
-  "generatedAt": "2026-07-24T10:14:26.542Z",
+  "version": 8,
+  "generatedAt": "2026-07-24T12:20:34.602Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
   "meta": {
@@ -799,7 +799,7 @@
       "dateLabel": "19 Eylül Cumartesi",
       "timeLabel": "Akşam",
       "location": "Pine Bay Plajı",
-      "description": "Cumartesi akşamı düzenlenecek plaj voleybolu etkinliğine katılmak isteyenlerin kaydı alınmaktadır. Takımlar sahada oluşturulacaktır.",
+      "description": "Cumartesi akşamı düzenlenecek plaj voleybolu etkinliğine katılmak isteyenlerin kaydı alınmaktadır.",
       "status": "open",
       "consentText": "Ad, soyad ve telefon bilgilerimin bu etkinliğin organizasyonu amacıyla işlenmesine onay veriyorum.",
       "consentUrl": "https://okansay.github.io/gpais-gizlilik/"
