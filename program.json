@@ -1,0 +1,938 @@
+{
+  "schema": 1,
+  "version": 2,
+  "generatedAt": "2026-07-24T05:20:25.498Z",
+  "minAppVersion": "1.1.0",
+  "tz": "+03:00",
+  "meta": {
+    "title": "8. Genç Pediatrik Alerjistler ve İmmünolojistler Sempozyumu",
+    "shortTitle": "8. GPAIS",
+    "motto": "Genç Pediatrik Alerjistler ve İmmünolojistler ile El Ele Yeni Nesil Yaklaşımlar",
+    "dates": "18–20 Eylül 2026",
+    "venue": "Pine Bay Holiday Resort Kongre Merkezi",
+    "city": "Kuşadası, Aydın",
+    "org": "Çocuk Alerji, İmmünoloji ve Astım Derneği",
+    "web": "gpais.org"
+  },
+  "days": [
+    {
+      "n": 1,
+      "date": "2026-09-18",
+      "label": "18 Eyl",
+      "full": "18 Eylül 2026",
+      "weekday": "Cuma",
+      "tracks": [
+        "mc",
+        "ato"
+      ]
+    },
+    {
+      "n": 2,
+      "date": "2026-09-19",
+      "label": "19 Eyl",
+      "full": "19 Eylül 2026",
+      "weekday": "Cumartesi",
+      "tracks": []
+    },
+    {
+      "n": 3,
+      "date": "2026-09-20",
+      "label": "20 Eyl",
+      "full": "20 Eylül 2026",
+      "weekday": "Pazar",
+      "tracks": [
+        "A",
+        "B"
+      ]
+    }
+  ],
+  "tracks": {
+    "mc": {
+      "label": "Master Class",
+      "short": "Master Class",
+      "color": "#8B31D6",
+      "soft": "#F2E9FD"
+    },
+    "ato": {
+      "label": "Atölyeler",
+      "short": "Atölye",
+      "color": "#0FA79A",
+      "soft": "#E0F5F2"
+    },
+    "A": {
+      "label": "Salon A",
+      "short": "Salon A",
+      "color": "#2F6BE0",
+      "soft": "#E7EEFC"
+    },
+    "B": {
+      "label": "Salon B",
+      "short": "Salon B",
+      "color": "#2FB457",
+      "soft": "#E4F6E9"
+    },
+    "uydu": {
+      "label": "Uydu Sempozyum",
+      "short": "Uydu",
+      "color": "#F0821E",
+      "soft": "#FDEEDD"
+    },
+    "genel": {
+      "label": "Genel Oturum",
+      "short": "Genel",
+      "color": "#0FA79A",
+      "soft": "#E0F5F2"
+    }
+  },
+  "sessions": [
+    {
+      "id": "mc1",
+      "day": 1,
+      "track": "mc",
+      "start": "13:30",
+      "end": "14:30",
+      "kind": "session",
+      "title": "Yeni Nesil İlaç Uygulamaları — Bölüm 1",
+      "parent": "Alerjik Hastalıklarda Yeni Nesil İlaç Uygulamaları Master Class",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Emine Dibek Mısırlıoğlu",
+        "Prof. Dr. Deniz Özçeker"
+      ],
+      "talks": [
+        {
+          "time": "13.30–13.50",
+          "title": "Atopik Dermatitte Dupilumab Deneyimi: Çocukluk Çağında Etkinlik, Güvenlik ve Gerçek Yaşam Verileri",
+          "sp": "Doç. Dr. Zeynep Şengül Emeksiz"
+        },
+        {
+          "time": "13.50–14.00",
+          "title": "Atopik Dermatitte Dupilumab Olgu Örnekleri",
+          "sp": "Uzm. Dr. Funda Aytekin Güvenir"
+        },
+        {
+          "time": "14.00–14.20",
+          "title": "Atopik Dermatitte JAK İnhibitörleri: Moleküler Mekanizmadan Kliniğe",
+          "sp": "Doç. Dr. Seda Şirin"
+        },
+        {
+          "time": "14.20–14.30",
+          "title": "Atopik Dermatitte JAK İnhibitörleri Olgu Örnekleri",
+          "sp": "Uzm. Dr. Müge Selin Ensari"
+        }
+      ]
+    },
+    {
+      "id": "mc2",
+      "day": 1,
+      "track": "mc",
+      "start": "14:45",
+      "end": "15:45",
+      "kind": "session",
+      "title": "Yeni Nesil İlaç Uygulamaları — Bölüm 2",
+      "parent": "Alerjik Hastalıklarda Yeni Nesil İlaç Uygulamaları Master Class",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Suna Asilsoy",
+        "Prof. Dr. Özlem Keskin"
+      ],
+      "talks": [
+        {
+          "time": "14.45–15.05",
+          "title": "Çocuklarda Eozinofilik Özefajitte Dupilumab: Yeni Bir Dönem Başlıyor",
+          "sp": "Prof. Dr. İlbilge Ertoy Karagöl"
+        },
+        {
+          "time": "15.05–15.15",
+          "title": "Çocuklarda Eozinofilik Özefajitte Dupilumab Olgu Örnekleri",
+          "sp": "Uzm. Dr. Kenan Çetin"
+        },
+        {
+          "time": "15.15–15.35",
+          "title": "Çocuklarda Ağır Eozinofilik Astımda Mepolizumab Tedavisi",
+          "sp": "Doç. Dr. Ayşegül Ertugrul"
+        },
+        {
+          "time": "15.35–15.45",
+          "title": "Mepolizumab Tedavisi Gerçek Yaşam Olgu Örnekleri",
+          "sp": "Uzm. Dr. Alp Kazancıoğlu"
+        }
+      ]
+    },
+    {
+      "id": "mc3",
+      "day": 1,
+      "track": "mc",
+      "start": "16:00",
+      "end": "17:30",
+      "kind": "session",
+      "title": "Yeni Nesil İlaç Uygulamaları — Bölüm 3",
+      "parent": "Alerjik Hastalıklarda Yeni Nesil İlaç Uygulamaları Master Class",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [],
+      "talks": [
+        {
+          "time": "16.00–16.30",
+          "title": "Dört Yönlü Tedavi: Omalizumab (Astımda, Kronik Ürtikerde, OİT ve Besin Alerjisinde)",
+          "sp": "Doç. Dr. Melike Ocak"
+        },
+        {
+          "time": "16.30–17.00",
+          "title": "Dört Yönlü Tedavi: Omalizumab Olgu Örnekleri",
+          "sp": "Uzm. Dr. Fatma Bal Çetinkaya"
+        },
+        {
+          "time": "17.00–17.30",
+          "title": "Çocuklarda Monoklonal Antikorların ve JAK-2 İnhibitörlerinin Raporlanma, Reçetelendirme Süreci ve Ödeme Kapsamları",
+          "sp": "Doç. Dr. Şükrü Çekiç"
+        }
+      ]
+    },
+    {
+      "id": "ato1",
+      "day": 1,
+      "track": "ato",
+      "start": "13:30",
+      "end": "18:00",
+      "kind": "workshop",
+      "room": "Atölye 1",
+      "title": "Herediter Anjiyoödem Tanı ve Tedavi Atölyesi",
+      "note": "Rotasyonlu · 13.30, 14.45 ve 16.00 seanslarında tekrarlanır. Katılımcılar üç gruba ayrılır, her seans sonunda salon değişir.",
+      "chairsLabel": "Moderatörler",
+      "chairs": [
+        "Prof. Dr. Ebru Arık Yılmaz",
+        "Doç. Dr. Mehtap Kılıç"
+      ],
+      "sorumlular": [
+        "Uzm. Dr. Dilek Kaçar",
+        "Doç. Dr. Ömer Akçal",
+        "Uzm. Dr. Nilay Çalışkan",
+        "Uzm. Dr. Hamit Boluğur",
+        "Uzm. Dr. Nergiz Kendirci"
+      ],
+      "topics": [
+        "Herediter anjiyoödem tipleri",
+        "Patogenezde yeni mutasyonlar",
+        "Berotralstat ve Lanadelumab deneyimi",
+        "Dünyada herediter anjiyoödem tedavisinde yenilikler (Garadacimab, Donidalorsen)",
+        "Akut ve profilakside kullanılan ilaçların raporlama pratiği"
+      ],
+      "talks": []
+    },
+    {
+      "id": "ato2",
+      "day": 1,
+      "track": "ato",
+      "start": "13:30",
+      "end": "18:00",
+      "kind": "workshop",
+      "room": "Atölye 2",
+      "title": "İmmünoglobulin Uygulamaları Atölyesi",
+      "note": "Rotasyonlu · 13.30, 14.45 ve 16.00 seanslarında tekrarlanır. Katılımcılar üç gruba ayrılır, her seans sonunda salon değişir.",
+      "chairsLabel": "Moderatörler",
+      "chairs": [
+        "Doç. Dr. Esra Yücel",
+        "Doç. Dr. İlknur Kökçü Karadağ"
+      ],
+      "sorumlular": [
+        "Uzm. Dr. Ezgi Yalçın Güngören",
+        "Uzm. Dr. Hasret Erkmen",
+        "Uzm. Dr. Tutku Baylan",
+        "Doç. Dr. İlknur Kökçü Karadağ"
+      ],
+      "topics": [
+        "Kolaylaştırılmış subkutan uygulamalar",
+        "%20'lik subkutan uygulamalar",
+        "IVIG uygulamasında dikkat edilmesi gerekenler",
+        "İmmünoglobulin Replasman Tedavisi (IgRT)'de bireyselleştirilmiş tedavi"
+      ],
+      "talks": []
+    },
+    {
+      "id": "ato3",
+      "day": 1,
+      "track": "ato",
+      "start": "13:30",
+      "end": "18:00",
+      "kind": "workshop",
+      "room": "Atölye 3",
+      "title": "Bileşene Dayalı Test Yorumlama Atölyesi",
+      "note": "Rotasyonlu · 13.30, 14.45 ve 16.00 seanslarında tekrarlanır. Katılımcılar üç gruba ayrılır, her seans sonunda salon değişir.",
+      "chairsLabel": "Moderatörler",
+      "chairs": [
+        "Prof. Dr. Cevdet Özdemir",
+        "Prof. Dr. Betül Büyüktiryaki"
+      ],
+      "sorumlular": [
+        "Doç. Dr. Handan Duman Şenol",
+        "Doç. Dr. Özge Atay",
+        "Prof. Dr. Betül Büyüktiryaki",
+        "Uzm. Dr. Mehmet Şirin Kaya",
+        "Dr. Öğr. Üyesi Enes Çelik"
+      ],
+      "topics": [
+        "Çapraz duyarlanma mı gerçek alerji mi?",
+        "Fırınlanmış ürünlere geçişte moleküler testlerin rolü",
+        "Kuruyemiş ve fıstık alerjisinde hangisi OİT'e uygun?",
+        "Polen besin sendromu ve çapraz reaksiyonlar",
+        "Venom alerjisinde uygun AİT seçimi"
+      ],
+      "talks": []
+    },
+    {
+      "id": "d1k1",
+      "day": 1,
+      "track": "genel",
+      "start": "14:30",
+      "end": "14:45",
+      "kind": "break",
+      "title": "Kahve Molası"
+    },
+    {
+      "id": "d1k2",
+      "day": 1,
+      "track": "genel",
+      "start": "15:45",
+      "end": "16:00",
+      "kind": "break",
+      "title": "Kahve Molası"
+    },
+    {
+      "id": "d2s1",
+      "day": 2,
+      "track": "genel",
+      "start": "08:00",
+      "end": "09:00",
+      "kind": "session",
+      "title": "Pediatrik Astım ve Biyolojik Tedaviler",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Haluk Çokuğraş",
+        "Prof. Dr. Nermin Güler",
+        "Prof. Dr. Arzu Bakırtaş"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Astım tedavisinde güncel rehberlere göre yenilikler",
+          "sp": "Uzm. Dr. Burcu Sarıgül"
+        },
+        {
+          "time": "",
+          "title": "Astımda Fenotipleme: Biyobelirteçlerin Akılcı Kullanımı",
+          "sp": "Uzm. Dr. Emre Özdamar"
+        },
+        {
+          "time": "",
+          "title": "Pediatrik Ağır Astımda Kullanılan Biyolojik Ajanlar: Gerçek Yaşam Çalışmaları",
+          "sp": "Uzm. Dr. Berna Uzunoğlu"
+        }
+      ]
+    },
+    {
+      "id": "d2s2",
+      "day": 2,
+      "track": "genel",
+      "start": "09:00",
+      "end": "10:00",
+      "kind": "session",
+      "title": "Besin Alerjilerinde Yeni Ufuklar",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Esen Demir",
+        "Prof. Dr. Metin Aydoğan"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Hangi besinlerle OİT yapılabilir?",
+          "sp": "Uzm. Dr. Canan Caka Özdemir"
+        },
+        {
+          "time": "",
+          "title": "Çoklu besin alerjisinde OİT pratiği",
+          "sp": "Uzm. Dr. Deniz İlgün Gürel"
+        },
+        {
+          "time": "",
+          "title": "OİT'te endoskopi ne zaman?",
+          "sp": "Uzm. Dr. Sibel Gürbüz"
+        }
+      ]
+    },
+    {
+      "id": "d2k1",
+      "day": 2,
+      "track": "genel",
+      "start": "10:00",
+      "end": "10:30",
+      "kind": "break",
+      "title": "Kahve Molası"
+    },
+    {
+      "id": "d2u1",
+      "day": 2,
+      "track": "uydu",
+      "start": "10:30",
+      "end": "11:15",
+      "kind": "satellite",
+      "title": "Uydu Sempozyum – 1",
+      "chairs": [],
+      "talks": []
+    },
+    {
+      "id": "d2s3",
+      "day": 2,
+      "track": "genel",
+      "start": "11:15",
+      "end": "12:00",
+      "kind": "session",
+      "title": "Atopik Marşın Ritmini Değiştirmek: Yeni Nesil Yaklaşımlar",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Nihat Sapan",
+        "Prof. Dr. Figen Gülen",
+        "Prof. Dr. Pınar Uysal"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Atopik Dermatit ve Besin Alerjisi Çıkmazı: Eliminasyon mu, Erken Tanıştırma mı?",
+          "sp": "Uzm. Dr. Gülten Tuncerler"
+        },
+        {
+          "time": "",
+          "title": "Disbiyozisten toleransa: Sinbiyotiklerin gücü",
+          "sp": "Uzm. Dr. Gaye Kocatepe"
+        },
+        {
+          "time": "",
+          "title": "Alerjik Yürüyüşü Durdurmak Mümkün mü? Alerjen İmmünoterapide Güncel Kanıtlar",
+          "sp": "Uzm. Dr. Sezin Aydemir"
+        }
+      ]
+    },
+    {
+      "id": "d2l1",
+      "day": 2,
+      "track": "genel",
+      "start": "12:00",
+      "end": "13:00",
+      "kind": "lunch",
+      "title": "Öğle Yemeği"
+    },
+    {
+      "id": "d2s4",
+      "day": 2,
+      "track": "genel",
+      "start": "13:00",
+      "end": "14:00",
+      "kind": "session",
+      "title": "İmmün Yetmezlikten Ne Zaman Şüphelenmeliyim?",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Şebnem Kılıç",
+        "Doç. Dr. İlknur Külhaş Çelik"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Tekrarlayan Ateşli Çocuğa Nasıl Yaklaşırım? Hangi Hastada Otoinflamatuvar Hastalık Düşünelim?",
+          "sp": "Uzm. Dr. Can Akal"
+        },
+        {
+          "time": "",
+          "title": "Enfeksiyon Dışı Prezantasyonlar",
+          "sp": "Uzm. Dr. Zeynep Meriç"
+        },
+        {
+          "time": "",
+          "title": "Hipogamaglobulinemili Çocuğa Nasıl Yaklaşalım?",
+          "sp": "Uzm. Dr. Gülşah Kalay"
+        },
+        {
+          "time": "",
+          "title": "Ne Zaman, Hangi Genetik Testi İsteyelim? Sonucu Nasıl Yorumlayalım?",
+          "sp": "Uzm. Dr. Salim Can"
+        }
+      ]
+    },
+    {
+      "id": "d2u2",
+      "day": 2,
+      "track": "uydu",
+      "start": "14:00",
+      "end": "14:40",
+      "kind": "satellite",
+      "title": "Uydu Sempozyum – 2",
+      "chairs": [],
+      "talks": []
+    },
+    {
+      "id": "d2k2",
+      "day": 2,
+      "track": "genel",
+      "start": "14:40",
+      "end": "15:00",
+      "kind": "break",
+      "title": "Kahve Molası"
+    },
+    {
+      "id": "d2u3",
+      "day": 2,
+      "track": "uydu",
+      "start": "15:00",
+      "end": "15:40",
+      "kind": "satellite",
+      "title": "Uydu Sempozyum – 3",
+      "chairs": [],
+      "talks": []
+    },
+    {
+      "id": "d2s5",
+      "day": 2,
+      "track": "genel",
+      "start": "15:40",
+      "end": "16:00",
+      "kind": "session",
+      "title": "Alerji ve İmmünolojide Zor Olgular",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Tuba Tuncel",
+        "Doç. Dr. Dilara Kocacık Uygun"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Besin Alerjisinde Zor Olgu Örnekleri",
+          "sp": "Uzm. Dr. İsmail Ozanlı"
+        },
+        {
+          "time": "",
+          "title": "Doğuştan Bağışıklık Kusurlarında Zor Olgu Örnekleri",
+          "sp": "Uzm. Dr. Burcu Özkan Kırgın"
+        }
+      ]
+    },
+    {
+      "id": "d2s6",
+      "day": 2,
+      "track": "genel",
+      "start": "16:00",
+      "end": "16:30",
+      "kind": "session",
+      "title": "Pratikte Genç Alerjist ve İmmünolojistler için Yapay Zekânın Kullanımı ve Sınırları Ne Olmalı?",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Zülfikar Akelma",
+        "Doç. Dr. Velat Çelik",
+        "Doç. Dr. Ahmet Kan"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Yapay zekâ ile güçlenen alerjistler: Klinik Pratik, Eğitim ve Akademik Üretimde Yeni Fırsatlar",
+          "sp": "Uzm. Dr. Cihangir Şahin"
+        },
+        {
+          "time": "",
+          "title": "Yapay Zekâ ile Sınanan Alerjist: Etik, Mahremiyet ve Klinik Muhakemenin Kırılganlığı",
+          "sp": "Uzm. Dr. Okan Dolu"
+        }
+      ]
+    },
+    {
+      "id": "d3a1",
+      "day": 3,
+      "track": "A",
+      "start": "07:30",
+      "end": "08:30",
+      "kind": "session",
+      "title": "Anafilaksiyi Yönetmek: Tanısal Tuzaklar ve Modern Tedavi",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Mustafa Arga",
+        "Prof. Dr. Semiha Bahçeci"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Süt çocuklarında Anafilaksi: 'Sessiz' Bulguları Tanımak",
+          "sp": "Uzm. Dr. Hilal Karabağ Çıtlak"
+        },
+        {
+          "time": "",
+          "title": "İdiyopatik Anafilaksi ve Mast Hücre Hastalıkları: Ne Zaman İleri Tetkik Gerekir?",
+          "sp": "Uzm. Dr. Necmiye Öztürk"
+        },
+        {
+          "time": "",
+          "title": "Adrenalin Uygulamasında Yeni Ufuklar: Otoenjektör ve Nazal Sprey",
+          "sp": "Uzm. Dr. Hediye Küçükkeleş"
+        }
+      ]
+    },
+    {
+      "id": "d3a2",
+      "day": 3,
+      "track": "A",
+      "start": "08:30",
+      "end": "09:30",
+      "kind": "session",
+      "title": "Atopik Dermatit Taklitçileri ve Yeni Nesil Tedavi Yaklaşımları",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Nevin Uzuner",
+        "Prof. Dr. Duygu Erge"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Atopik Dermatit Taklitçileri",
+          "sp": "Uzm. Dr. Abdullah Arık"
+        },
+        {
+          "time": "",
+          "title": "Görünmeyen Tehdit: Mikrobiyota Disbiyozisi ve S. aureus ile Mücadelede Güncel Stratejiler",
+          "sp": "Uzm. Dr. Cansu Özdemiral"
+        },
+        {
+          "time": "",
+          "title": "Atopik Dermatitte Proaktif Tedavi: 'Atak Bekleme, Kontrolü Ele Al'",
+          "sp": "Uzm. Dr. Yüksel Kavas Yıldız"
+        }
+      ]
+    },
+    {
+      "id": "d3ka",
+      "day": 3,
+      "track": "A",
+      "start": "09:30",
+      "end": "10:00",
+      "kind": "break",
+      "title": "Kahve Molası"
+    },
+    {
+      "id": "d3a3",
+      "day": 3,
+      "track": "A",
+      "start": "10:00",
+      "end": "11:00",
+      "kind": "session",
+      "title": "İlaç Alerjilerinde 'Delabeling' (Etiketin Kaldırılması) ve Akılcı İlaç Yönetimi",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. İlbilge Ertoy Karagöl",
+        "Prof. Dr. Emine Vezir",
+        "Doç. Dr. Hakan Güvenir"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Antibiyotik Yönetiminde Alerjistin Rolü: Yanlış Tanıların Klinik ve Ekonomik Sonuçları",
+          "sp": "Uzm. Dr. Veysi Akbey"
+        },
+        {
+          "time": "",
+          "title": "DAP Testi Olmadığında Beta Laktam Alerji Testini Nasıl Yapalım?",
+          "sp": "Uzm. Dr. Halime Yağmur"
+        },
+        {
+          "time": "",
+          "title": "Çocuklarda Beta-Laktam Alerjisi Etiketini Kaldırmak: Pen-Fast Skoru ve Yeni Algoritmalar",
+          "sp": "Uzm. Dr. Güler Yıldırım"
+        },
+        {
+          "time": "",
+          "title": "'Treating Through' (Tedaviye Devam): Makülopapüler Ekzantemlerde İlacı Kesmeli miyiz?",
+          "sp": "Uzm. Dr. Pınar Yağmur Altınkaynak"
+        }
+      ]
+    },
+    {
+      "id": "d3a4",
+      "day": 3,
+      "track": "A",
+      "start": "11:00",
+      "end": "12:00",
+      "kind": "session",
+      "title": "Tanımızı Koyduk, Aileye Öneriler Ne Olmalı? Annelerin Sorularına Yanıtlar",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Özlem Yılmaz",
+        "Doç. Dr. Sevgi Sipahi Çimen"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Besin Alerjili Çocuk",
+          "sp": "Uzm. Dr. Esra Çepniler"
+        },
+        {
+          "time": "",
+          "title": "Atopik Dermatitli Çocuk Bakımı",
+          "sp": "Uzm. Dr. Mehmet Yavuz Özbey"
+        },
+        {
+          "time": "",
+          "title": "Astım ve Alerjik Rinitli Çocuk",
+          "sp": "Uzm. Dr. Yağmur Hazal Şadırvan Oğuzkaya"
+        },
+        {
+          "time": "",
+          "title": "Kutanöz Mastositozlu Çocuk",
+          "sp": "Uzm. Dr. Selin Sevinç"
+        }
+      ]
+    },
+    {
+      "id": "d3b1",
+      "day": 3,
+      "track": "B",
+      "start": "09:00",
+      "end": "10:00",
+      "kind": "oral",
+      "title": "Sözlü Bildiriler: İlaç Alerjisi",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Doç. Dr. Aylin Kont",
+        "Doç. Dr. Ahmet Selmanoğlu"
+      ],
+      "talks": []
+    },
+    {
+      "id": "d3b2",
+      "day": 3,
+      "track": "B",
+      "start": "10:00",
+      "end": "11:00",
+      "kind": "oral",
+      "title": "Sözlü Bildiriler: Besin Alerjisi",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Doç. Dr. Murat Özer",
+        "Doç. Dr. Hilal Ünsal"
+      ],
+      "talks": []
+    },
+    {
+      "id": "d3b3",
+      "day": 3,
+      "track": "B",
+      "start": "11:00",
+      "end": "12:00",
+      "kind": "oral",
+      "title": "Sözlü Bildiriler: İmmünoloji",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Doç. Dr. Nurhan Aruçi Kasap",
+        "Doç. Dr. İlknur Kökçü Karadağ"
+      ],
+      "talks": []
+    },
+    {
+      "id": "d3lb",
+      "day": 3,
+      "track": "B",
+      "start": "12:00",
+      "end": "13:00",
+      "kind": "lunch",
+      "title": "Öğle Yemeği"
+    },
+    {
+      "id": "d3b4",
+      "day": 3,
+      "track": "B",
+      "start": "13:00",
+      "end": "14:00",
+      "kind": "oral",
+      "title": "Sözlü Bildiriler: Deri Alerjileri",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Pınar Uysal",
+        "Doç. Dr. Ahmet Kan"
+      ],
+      "talks": []
+    },
+    {
+      "id": "d3b5",
+      "day": 3,
+      "track": "B",
+      "start": "14:00",
+      "end": "15:00",
+      "kind": "oral",
+      "title": "Sözlü Bildiriler: Anafilaksi",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Semiha Bahçeci",
+        "Doç. Dr. Ayşe Süleyman"
+      ],
+      "talks": []
+    },
+    {
+      "id": "d3b6",
+      "day": 3,
+      "track": "B",
+      "start": "15:00",
+      "end": "16:00",
+      "kind": "oral",
+      "title": "Sözlü Bildiriler: Astım ve Rinit",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Erdem Topal",
+        "Prof. Dr. Himmet Haluk Akar"
+      ],
+      "talks": []
+    }
+  ],
+  "activities": [
+    {
+      "id": "efes-2026",
+      "title": "Efes Antik Kenti Gezisi",
+      "emoji": "🏛️",
+      "color": "#8B31D6",
+      "soft": "#F2E9FD",
+      "dateLabel": "18 Eylül Cuma",
+      "location": "Efes / Selçuk",
+      "description": "Sempozyum kapsamında düzenlenecek Efes Antik Kenti gezisine katılmak isteyenlerin kaydı alınmaktadır. Ayrıntılar kayıt olanlara ayrıca duyurulacaktır.",
+      "status": "open",
+      "consentText": "Ad, soyad ve telefon bilgilerimin bu etkinliğin organizasyonu amacıyla işlenmesine onay veriyorum.",
+      "consentUrl": "https://okansay.github.io/gpais-gizlilik/"
+    },
+    {
+      "id": "voleybol-2026",
+      "title": "Plaj Voleybolu",
+      "emoji": "🏐",
+      "color": "#F0821E",
+      "soft": "#FDEEDD",
+      "dateLabel": "19 Eylül Cumartesi",
+      "timeLabel": "Akşam",
+      "location": "Pine Bay Plajı",
+      "description": "Cumartesi akşamı düzenlenecek plaj voleybolu etkinliğine katılmak isteyenlerin kaydı alınmaktadır. Takımlar sahada oluşturulacaktır.",
+      "status": "open",
+      "consentText": "Ad, soyad ve telefon bilgilerimin bu etkinliğin organizasyonu amacıyla işlenmesine onay veriyorum.",
+      "consentUrl": "https://okansay.github.io/gpais-gizlilik/"
+    }
+  ],
+  "committee": {
+    "leadership": [
+      {
+        "role": "Sempozyum Başkanı",
+        "name": "Prof. Dr. Öner Özdemir"
+      },
+      {
+        "role": "Sempozyum Genç Başkanı",
+        "name": "Prof. Dr. Deniz Özçeker"
+      },
+      {
+        "role": "Sempozyum Sekreteri",
+        "name": "Doç. Dr. Sevgi Sipahi Çimen"
+      },
+      {
+        "role": "Sempozyum Genç Sekreteri",
+        "name": "Uzm. Dr. Ece Tüsüz Önata"
+      }
+    ],
+    "board": {
+      "title": "Çocuk Alerji İmmünoloji ve Astım Derneği Yönetim Kurulu",
+      "rows": [
+        {
+          "role": "Başkan",
+          "name": "Prof. Dr. Arzu Bakırtaş"
+        },
+        {
+          "role": "Sekreter",
+          "name": "Prof. Dr. Metin Aydoğan"
+        },
+        {
+          "role": "Sayman",
+          "name": "Prof. Dr. H. Tekin Nacaroğlu"
+        }
+      ],
+      "members": [
+        "Prof. Dr. Koray Harmancı",
+        "Prof. Dr. Zeynep Ülker Altınel",
+        "Prof. Dr. Mustafa Arga",
+        "Prof. Dr. Pınar Uysal",
+        "Prof. Dr. Deniz Özçeker",
+        "Doç. Dr. Esra Özek Yücel"
+      ]
+    },
+    "organizing": [
+      "Doç. Dr. Mehtap Kılıç",
+      "Doç. Dr. İlknur Kökçü Karadağ",
+      "Doç. Dr. Velat Çelik",
+      "Dr. Öğr. Üyesi Enes Çelik",
+      "Uzm. Dr. Cihangir Şahin",
+      "Uzm. Dr. Okan Dolu",
+      "Uzm. Dr. Ezgi Yalçın Güngören",
+      "Uzm. Dr. Pınar Yağmur Altınkaynak",
+      "Uzm. Dr. Eren Sarı"
+    ],
+    "scientific": [
+      "Prof. Dr. Arzu Bakırtaş",
+      "Prof. Dr. Deniz Özçeker",
+      "Prof. Dr. H. Tekin Nacaroğlu",
+      "Prof. Dr. Koray Harmancı",
+      "Prof. Dr. Metin Aydoğan",
+      "Prof. Dr. Mustafa Arga",
+      "Prof. Dr. Özlem Yılmaz",
+      "Prof. Dr. Pınar Uysal",
+      "Prof. Dr. Zeynep Ülker Altınel",
+      "Doç. Dr. Ahmet Kan",
+      "Doç. Dr. Esra Yücel",
+      "Doç. Dr. Nurşen Ciğerci Günaydın",
+      "Doç. Dr. Velat Çelik",
+      "Dr. Öğr. Üyesi Leman Tuba Karakurt",
+      "Dr. Öğr. Üyesi Avniye Kübra Baskın",
+      "Uzm. Dr. Mehmet Geyik",
+      "Uzm. Dr. Özge Türkyılmaz Uçar",
+      "Uzm. Dr. Sinem Polat Terece",
+      "Uzm. Dr. Sümeyye Baysal",
+      "Uzm. Dr. Aysu İlhan Yalaki",
+      "Uzm. Dr. Ezgi Topyıldız",
+      "Uzm. Dr. Figen Çelebi Çelik",
+      "Uzm. Dr. Eren Sarı",
+      "Uzm. Dr. Gözde Özkan"
+    ]
+  },
+  "hosts": [
+    {
+      "name": "Prof. Dr. Öner Özdemir",
+      "role": "Sempozyum Başkanı"
+    },
+    {
+      "name": "Prof. Dr. Deniz Özçeker",
+      "role": "Sempozyum Genç Başkanı"
+    },
+    {
+      "name": "Doç. Dr. Sevgi Sipahi Çimen",
+      "role": "Sempozyum Sekreteri"
+    },
+    {
+      "name": "Prof. Dr. Arzu Bakırtaş",
+      "role": "Dernek Başkanı"
+    }
+  ],
+  "contacts": [
+    {
+      "kind": "Bilimsel Sekreterya",
+      "org": "Çocuk Alerji, İmmünoloji ve Astım Derneği",
+      "address": "Şehremini Mah. Millet Cad. No:133/4, Fatih / İstanbul",
+      "phones": [
+        "+90 212 534 04 52",
+        "+90 537 268 85 48"
+      ],
+      "email": "cocukalerjiastim@gmail.com"
+    },
+    {
+      "kind": "Organizasyon Sekreteryası",
+      "org": "DMR Turizm & Kongre Organizasyonu",
+      "address": "Sukarno Cad. 696. Sok. No:22 D:9-10, Yıldız – Çankaya / Ankara",
+      "phones": [
+        "+90 312 442 01 50"
+      ],
+      "email": "gencalerjistler@dmrturizm.com.tr"
+    }
+  ]
+}
