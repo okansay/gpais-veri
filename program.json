@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 6,
+  "version": 7,
   "generatedAt": "2026-07-24T10:14:26.542Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
@@ -925,5 +925,8 @@
       ],
       "email": "gencalerjistler@dmrturizm.com.tr"
     }
-  ]
+  ],
+  "endpoints": {
+    "form": "https://script.google.com/macros/s/AKfycbxS_raOjcA9ZUmp5EqoS0L72advyLRlisomVqeBkwIwCkpecP49W-4VIuEsAG9tJynM/exec"
+  }
 }
