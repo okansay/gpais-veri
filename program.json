@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 2,
+  "version": 3,
   "generatedAt": "2026-07-24T05:20:25.498Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
@@ -336,7 +336,7 @@
       "start": "09:00",
       "end": "10:00",
       "kind": "session",
-      "title": "Besin Alerjilerinde Yeni Ufuklar",
+      "title": "[UZAK GÜNCELLEME] Besin Alerjilerinde Yeni Ufuklar",
       "chairsLabel": "Oturum Başkanları",
       "chairs": [
         "Prof. Dr. Esen Demir",
