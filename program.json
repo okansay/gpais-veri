@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 8,
+  "version": 9,
   "generatedAt": "2026-07-24T12:20:34.602Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
@@ -927,6 +927,6 @@
     }
   ],
   "endpoints": {
-    "form": "https://script.google.com/macros/s/AKfycbxS_raOjcA9ZUmp5EqoS0L72advyLRlisomVqeBkwIwCkpecP49W-4VIuEsAG9tJynM/exec"
+    "form": "https://script.google.com/macros/s/AKfycbxhOaogHXT0jgwGF80JphKfvYrOSnknYkIWLSKxGjSwzcKpJ9Eib7Ch9-BWtRaIbRNhWw/exec"
   }
 }
