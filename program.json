@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "version": 9,
-  "generatedAt": "2026-07-24T12:20:34.602Z",
+  "version": 10,
+  "generatedAt": "2026-08-10T06:56:46.798Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
   "meta": {
@@ -340,6 +340,7 @@
       "chairsLabel": "Oturum Başkanları",
       "chairs": [
         "Prof. Dr. Esen Demir",
+        "Prof. Dr. Zeynep Ülker Altınel",
         "Prof. Dr. Metin Aydoğan"
       ],
       "talks": [
@@ -377,8 +378,19 @@
       "end": "11:15",
       "kind": "satellite",
       "title": "Uydu Sempozyum – 1",
-      "chairs": [],
-      "talks": []
+      "parent": "Nuvomed",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Koray Harmancı",
+        "Doç. Dr. Nurşen Ciğerci Günaydın"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Solunum Yolu Alerjilerinde Akılcı Kombinasyon Stratejileri: ARIA-EAACI Güncellemesi Işığında Alerjik Rinit Yönetimi",
+          "sp": "Uydu Konuşmacısı: Prof. Dr. Hikmet Tekin Nacaroğlu"
+        }
+      ]
     },
     {
       "id": "d2s3",
@@ -465,8 +477,19 @@
       "end": "14:40",
       "kind": "satellite",
       "title": "Uydu Sempozyum – 2",
-      "chairs": [],
-      "talks": []
+      "parent": "Kedrion Biopharma",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Prof. Dr. Öner Özdemir",
+        "Doç. Dr. Esra Yücel"
+      ],
+      "talks": [
+        {
+          "time": "",
+          "title": "Soru ve Cevaplarla İmmünglobulin Tedavisi",
+          "sp": "Konuşmacı: Prof. Dr. Sara Şebnem Kılıç Gültekin"
+        }
+      ]
     },
     {
       "id": "d2k2",
@@ -478,22 +501,11 @@
       "title": "Kahve Molası"
     },
     {
-      "id": "d2u3",
-      "day": 2,
-      "track": "A",
-      "start": "15:00",
-      "end": "15:40",
-      "kind": "satellite",
-      "title": "Uydu Sempozyum – 3",
-      "chairs": [],
-      "talks": []
-    },
-    {
       "id": "d2s5",
       "day": 2,
       "track": "A",
-      "start": "15:40",
-      "end": "16:00",
+      "start": "15:00",
+      "end": "15:20",
       "kind": "session",
       "title": "Alerji ve İmmünolojide Zor Olgular",
       "chairsLabel": "Oturum Başkanları",
@@ -518,8 +530,8 @@
       "id": "d2s6",
       "day": 2,
       "track": "A",
-      "start": "16:00",
-      "end": "16:30",
+      "start": "15:20",
+      "end": "15:50",
       "kind": "session",
       "title": "Pratikte Genç Alerjist ve İmmünolojistler için Yapay Zekânın Kullanımı ve Sınırları Ne Olmalı?",
       "chairsLabel": "Oturum Başkanları",
@@ -686,7 +698,68 @@
       ]
     },
     {
-      "id": "d3b1",
+      "id": "d2b1",
+      "day": 2,
+      "track": "B",
+      "start": "08:00",
+      "end": "09:00",
+      "kind": "oral",
+      "title": "Sözlü Bildiriler: Besin Alerjisi – 1",
+      "chairsLabel": "Oturum Başkanları",
+      "chairs": [
+        "Doç. Dr. Sevgi Sipahi Çimen",
+        "Doç. Dr. Velat Çelik"
+      ],
+      "talks": [
+        {
+          "time": "S-01",
+          "title": "Oral Besin Provokasyon Testlerinin Değerlendirilmesi",
+          "sp": "Bilgen İstek Aydemir"
+        },
+        {
+          "time": "S-02",
+          "title": "Basamaklı Oral Besin Yüklemeleriyle Uygulanan Biscotti Temelli Süt ve Yumurta Merdiveni: Yüksek Riskli Çocuklarda Retrospektif Bir Çalışma",
+          "sp": "Uğur Altaş"
+        },
+        {
+          "time": "S-03",
+          "title": "İnek Sütü Proteini Alerjisi ile İlgili Kısa Formatlı Sosyal Medya Videolarının Kalite, Güvenilirlik ve Klinik Doğruluğunun Değerlendirilmesi: Platformlar Arası İçerik Analizi",
+          "sp": "Rıza Yıldırım"
+        },
+        {
+          "time": "S-04",
+          "title": "Çocukluk Çağında Meyve ve Sebze Alerjisinin Klinik ve Laboratuvar Özellikleri: Beş Yıllık Retrospektif Bir Değerlendirme",
+          "sp": "Şule Papağan"
+        },
+        {
+          "time": "S-05",
+          "title": "Aile Hekimleri ve Pediatri Hekimlerinde İnek Sütü Protein Alerjisi Bilgi Düzeyi, Klinik Uygulama ve Öz-Yeterlilik Algısı: Kesitsel Bir Anket Çalışması",
+          "sp": "Çağla Öztürk Turan"
+        },
+        {
+          "time": "S-06",
+          "title": "Çocukluk Çağı Eozinofilik Özofajitte Histolojik Yanıt ve Besin Yeniden Tanıtımı: Tek Merkez Deneyimi",
+          "sp": "Aysu İlhan Yalaki"
+        },
+        {
+          "time": "S-07",
+          "title": "Besin-protein ilişkili Enterokolit Sendromu: Üç Çocuktan Oluşan Bir Vaka Serisi",
+          "sp": "Gülnar Aliyeva"
+        },
+        {
+          "time": "S-08",
+          "title": "Eozinofilik Özofajitte Dupilumab Tedavisi: Tek Merkez Deneyimi",
+          "sp": "İlknur Atalay Can"
+        },
+        {
+          "time": "S-09",
+          "title": "Akut Besin Proteini İlişkili Enterokolit Sendrom: Yeterince Tanıyor Muyuz?",
+          "sp": "Gizem Köken"
+        }
+      ]
+    },
+    {
+      "id": "d2b2",
       "day": 2,
       "track": "B",
       "start": "09:00",
@@ -698,25 +771,102 @@
         "Doç. Dr. Aylin Kont",
         "Doç. Dr. Ahmet Selmanoğlu"
       ],
-      "talks": []
+      "talks": [
+        {
+          "time": "S-10",
+          "title": "Çocuklarda Doğrulanmış Nonsteroid Antiinflamatuar İlaç Aşırı Duyarlılığı: Fenotipik Dağılım ve Güvenli Alternatif İlaçların Belirlenmesi",
+          "sp": "Seda Aksoy Girgiç"
+        },
+        {
+          "time": "S-11",
+          "title": "Tekrarlayan Kusmanın Nadir Bir Nedeni: Amoksisilin-Klavulanata Bağlı İlaç İlişkili Enterokolit Sendromu",
+          "sp": "Deniz Şeyda Bayrak"
+        },
+        {
+          "time": "S-12",
+          "title": "Amoksisilin-Klavulanat Alerjisi olan Çocukların Demografik, Klinik Özellikleri ve Tanısal Değerlendirme Sonuçları: Tek Merkez Deneyimi",
+          "sp": "Hasan Tunç Şarman"
+        },
+        {
+          "time": "S-13",
+          "title": "Yatan Çocuklarda Şüpheli İlaç Aşırı Duyarlılığı Konsültasyonlarına Akut Dönem Yaklaşımı: Fenotip, Tetikleyiciler ve Tanısal Test Uygulama Oranları",
+          "sp": "Necmi Can Yüksel"
+        },
+        {
+          "time": "S-14",
+          "title": "Çocuklarda NSAİİ ve Parasetamol Hipersensitivitesi Şüphesiyle Yapılan İlaç Provokasyon Testlerinin Retrospektif Değerlendirilmesi",
+          "sp": "İkbal Nur Şafak"
+        },
+        {
+          "time": "S-15",
+          "title": "Pediatrik Hastalarda Genel ve Lokal Anestezik İlaç Hipersensitivitesi: Tek Merkez Deneyimi",
+          "sp": "Emine Ülgen"
+        },
+        {
+          "time": "S-16",
+          "title": "Perioperatif Anestezik Ajanlar ile Şüpheli Aşırı Duyarlılık Öyküsü Olan Çocuklarda Deri Testi Rehberliğinde Güvenli Ajan Seçimi: Gerçek Yaşam Verileri",
+          "sp": "Mehmet Cihan Şentürk"
+        },
+        {
+          "time": "S-17",
+          "title": "Eozinofilik Özofajitli Çocuk Hastalarda Yarı Doz Proton Pompa İnhibitörü Tedavisine Yanıtın Değerlendirilmesi",
+          "sp": "Şenay Karaca"
+        }
+      ]
     },
     {
-      "id": "d3b2",
+      "id": "d2b3",
       "day": 2,
       "track": "B",
       "start": "10:00",
       "end": "11:00",
       "kind": "oral",
-      "title": "Sözlü Bildiriler: Besin Alerjisi",
+      "title": "Sözlü Bildiriler: Besin Alerjisi – 2",
       "chairsLabel": "Oturum Başkanları",
       "chairs": [
         "Doç. Dr. Murat Özer",
         "Doç. Dr. Hilal Ünsal"
       ],
-      "talks": []
+      "talks": [
+        {
+          "time": "S-18",
+          "title": "İnek Sütü Protein Alerjisi, Oral İmmünoterapi ve Atopik Yürüyüş: Yeni Atopik Hastalıklar ve Aeroalerjen Duyarlılığı",
+          "sp": "İlke Baş"
+        },
+        {
+          "time": "S-19",
+          "title": "Çocuklarda Süt Oral İmmünoterapisi Sırasında Gelişen Alerjik Reaksiyonların Değerlendirilmesi",
+          "sp": "Gamze Yaylak"
+        },
+        {
+          "time": "S-20",
+          "title": "Süt Çocukluğunda Başlayan Yumurta Alerjisinde İzole ve Çoklu Besin Alerjisi Fenotipi: Uzun Dönem Doğal Seyir Farklılıkları",
+          "sp": "Yasemin Tepe Devecioğlu"
+        },
+        {
+          "time": "S-21",
+          "title": "Besin Proteini İlişkili Alerjik Proktokolitte Klinik Seyir, Tolerans Gelişimi ve Uzun Dönem Atopik Morbidite",
+          "sp": "Seda Çevik"
+        },
+        {
+          "time": "S-22",
+          "title": "IgE Aracılı İnek Sütü Alerjisinde Doğal Tolerans Gelişme Süresi ve Etkileyen Faktörler",
+          "sp": "Pınar Şahin"
+        },
+        {
+          "time": "S-23",
+          "title": "Süt ve Yumurta Alerjili Çocuklarda Fırınlanmış Ürün Tüketimi ve Tolerans Gelişimi: Tek Merkezli Bir Gerçek Yaşam Verisi",
+          "sp": "Kübra Çevik Tokmak"
+        },
+        {
+          "time": "S-24",
+          "title": "Besin Proteinine Bağlı Enterokolit Sendromlu Çocuklarda ARFID sıklığı ve Toleransın Etkisi",
+          "sp": "Gülçin Kaymakoğlu"
+        }
+      ]
     },
     {
-      "id": "d3b3",
+      "id": "d2b4",
       "day": 2,
       "track": "B",
       "start": "11:00",
@@ -728,10 +878,51 @@
         "Doç. Dr. Nurhan Aruçi Kasap",
         "Doç. Dr. İlknur Kökçü Karadağ"
       ],
-      "talks": []
+      "talks": [
+        {
+          "time": "S-25",
+          "title": "Klinik Notlardan Yapay Zeka Destekli Sağlam/Hasta Kayıt Ayrımı: Pediatrik İmmünoglobulin Çalışmaları İçin Bir Ön Sistem",
+          "sp": "Ahmet Şanslı"
+        },
+        {
+          "time": "S-26",
+          "title": "İmmün Yetmezlik ile İzlenen Çocuklarda Otoinflamatuar Gen Varyantları: İmmün Yetmezlik–Otoinflamasyon Kesişiminde MEFV Ağırlıklı Bir Kohort",
+          "sp": "Lütfi Kılınçkaya"
+        },
+        {
+          "time": "S-27",
+          "title": "Selektif İmmünglobulin A Eksikliği Olan Çocuklarda Alerji ve Otoimmünite: Tek Merkezli 10 Yıllık Retrospektif Kohort Çalışması",
+          "sp": "Erengül Şahin"
+        },
+        {
+          "time": "S-28",
+          "title": "Süt Çocuğunun Geçici Hipogamaglobulinemisi ve Sınıflandırılamayan Hipogamaglobulinemi Ön Tanısıyla İzlenen Çocuklar: Tek Merkez Deneyimi",
+          "sp": "Hilal Karabağ Çıtlak"
+        },
+        {
+          "time": "S-29",
+          "title": "IVIG Replasman Tedavisi Alan Primer İmmün Yetmezlikli Çocuklarda Jeffrey Modell Uyarı Kriterlerinin Tanısal Değeri: Tek Merkezli Retrospektif Bir Değerlendirme",
+          "sp": "Hatemi Esam Demirtaş"
+        },
+        {
+          "time": "S-30",
+          "title": "Çocuklarda Selektif ve Parsiyel IgA Eksikliğinin Klinik ve İmmünolojik Özellikleri: Tek Merkez Deneyimi",
+          "sp": "Burcu Yaman Güçlü"
+        },
+        {
+          "time": "S-31",
+          "title": "Sık Enfeksiyon Nedeniyle Üçüncü Basamak Bir Merkeze Başvuran Çocuklarda Klinik Spektrum ve Altta Yatan Tanılar",
+          "sp": "Simge Atar Bese"
+        },
+        {
+          "time": "S-32",
+          "title": "Çocuk Alerji ve İmmünoloji Polikliniğinde Yapay Zekâ Destekli Yapılandırılmış Anamnez Üretimi: Halüsinasyonu Önleyen Kanıt Doğrulamalı, Açık Kaynaklı ve Kurum İçi Çalışabilen (On-Premise) Bir Sistem",
+          "sp": "Yusuf Ziya Varlı"
+        }
+      ]
     },
     {
-      "id": "d3b4",
+      "id": "d2b5",
       "day": 2,
       "track": "B",
       "start": "13:00",
@@ -743,10 +934,51 @@
         "Prof. Dr. Pınar Uysal",
         "Doç. Dr. Ahmet Kan"
       ],
-      "talks": []
+      "talks": [
+        {
+          "time": "S-33",
+          "title": "Pediatrik Mastositoz için Yaşam Kalitesi Ölçeğinin Geliştirilmesi ve Geçerlik-Güvenirlik Çalışması",
+          "sp": "Aslı Berivan Topçak"
+        },
+        {
+          "time": "S-34",
+          "title": "Çocukluk Çağı Kronik Ürtikerinde Klinik ve Prognoz Göstergeleri: Tek Merkez 250 Hasta Deneyimi",
+          "sp": "Ece Tüsüz Önata"
+        },
+        {
+          "time": "S-35",
+          "title": "Aeroalerjen Duyarlılığı Olan Çocuklarda Eozinofili Sıklığı ve İlişkili Klinik Fenotipler",
+          "sp": "Halil Alkaya"
+        },
+        {
+          "time": "S-36",
+          "title": "Herediter Anjioödemde Uzun Süreli Profilakside Berotralstat: İki Merkezli Gerçek Yaşam Deneyimi",
+          "sp": "Alperen Gökbulak"
+        },
+        {
+          "time": "S-37",
+          "title": "Alerjik Hastalığı Olan 12 Yaş Altı Çocuklarda Biyolojik Ajan Kullanımı",
+          "sp": "Ece Yay"
+        },
+        {
+          "time": "S-38",
+          "title": "Başvurudan İzleme Kadar: Tek Merkezde Çocuk Alerji ve İmmünoloji Konsültasyonlarının Değerlendirilmesi",
+          "sp": "Ece Şenbaykal Yiğit"
+        },
+        {
+          "time": "S-39",
+          "title": "Özofagusta Striktür Gelişen Eozinofilik Özofajitli Hastaların Klinik Özelliklerinin Değerlendirilmesi",
+          "sp": "Sümeyra Aktepe"
+        },
+        {
+          "time": "S-40",
+          "title": "Parsiyel PNP Eksikliğine Bağlı Atipik Kombine İmmün Yetmezlik Olgusu",
+          "sp": "Burcu Özge Erdoğan"
+        }
+      ]
     },
     {
-      "id": "d3b5",
+      "id": "d2b6",
       "day": 2,
       "track": "B",
       "start": "14:00",
@@ -758,10 +990,46 @@
         "Prof. Dr. Semiha Bahçeci",
         "Doç. Dr. Ayşe Süleyman"
       ],
-      "talks": []
+      "talks": [
+        {
+          "time": "S-41",
+          "title": "Altıncı Sınıf Öğrencilerinde Sanal Gerçeklik Temelli Eğitimin Adrenalin Oto-Enjektör Uygulama Becerilerine Katkısı",
+          "sp": "Buşra Varolgüneş Avınca"
+        },
+        {
+          "time": "S-42",
+          "title": "Aile Hekimlerinde Anafilaksi Bilgisi ve Klinik Olgu Senaryolarında Karar Verme Performansı: Kesitsel Bir Çalışma",
+          "sp": "Mehmet Geyik"
+        },
+        {
+          "time": "S-43",
+          "title": "Nedeni Belirlenemeyen Besin İlişkili Anafilaksili Çocuklarda Fenotip Odaklı Multipleks Moleküler Alerjen Profillemesi",
+          "sp": "Ceren Üstün"
+        },
+        {
+          "time": "S-44",
+          "title": "Anafilaksi Yönetiminde Adrenalin Oto-Enjektör Kullanımına İlişkin Tutum ve Engeller",
+          "sp": "Ömer Yılmaz Ulutaş"
+        },
+        {
+          "time": "S-45",
+          "title": "Anafilaksi Tanısı Alan Çocukların Klinik Özellikleri",
+          "sp": "Enes Çelik"
+        },
+        {
+          "time": "S-46",
+          "title": "İnek Sütü Alerjili Çocuklarda Anafilaksi İlişkili Faktörlerin Değerlendirilmesi",
+          "sp": "İdan Fırat Unay"
+        },
+        {
+          "time": "S-47",
+          "title": "Multipleks Moleküler Alerji Testlerinde Saptanan Arg R1 Duyarlanmasının Çocuklarda Klinik Önemi",
+          "sp": "Rabia Uysal"
+        }
+      ]
     },
     {
-      "id": "d3b6",
+      "id": "d2b7",
       "day": 2,
       "track": "B",
       "start": "15:00",
@@ -773,38 +1041,51 @@
         "Prof. Dr. Erdem Topal",
         "Prof. Dr. Himmet Haluk Akar"
       ],
-      "talks": []
+      "talks": [
+        {
+          "time": "S-48",
+          "title": "Süt Çocukluğunda RSV Bronşioliti Geçiren Çocuklarda Okul Öncesi Dönem Solunumsal Sonuçlar ve Tidal Nefes Analizinin Öngörü Değeri: İzlem Kohortu",
+          "sp": "Salih Başıbüyük"
+        },
+        {
+          "time": "S-49",
+          "title": "Allerjen İmmünoterapisi Başlanan Çocuklarda İlk Altı Ayda Akciğer Fonksiyonları ve Küçük Havayolu Disfonksiyonu: İmpuls Osilometri ve Spirometri ile Tekrarlı Ölçüm Analizi",
+          "sp": "Handan Özdemir Aslantar"
+        },
+        {
+          "time": "S-50",
+          "title": "Ev Tozu Akarı Duyarlılığı Olan Alerjik Rinitli Çocuklarda Çevresel Önlemlere Uyumun Klinik Şiddet ile İlişkisi: Kesitsel Bir Çalışma",
+          "sp": "Aslı Berivan Topçak"
+        },
+        {
+          "time": "S-51",
+          "title": "Subkutan Aeroalerjen İmmünoterapi Uygulanan Hastalarda Eozinofilik Özofajit Semptomları Ne Kadar Sık?",
+          "sp": "Begüm Poşul"
+        },
+        {
+          "time": "S-52",
+          "title": "Çocuklarda İnhaler Kullanım Tekniği: Teknik Başarı Düzeyi, Sık Yapılan Hatalar ve Astım Kontrolü ile İlişkisi",
+          "sp": "İren Yörük"
+        },
+        {
+          "time": "S-53",
+          "title": "Kedi Duyarlı Çocuklarda Moleküler Duyarlanma Profillerinin Değerlendirilmesi",
+          "sp": "Gizem Kabadayı"
+        },
+        {
+          "time": "S-54",
+          "title": "Kedi Alerjisi mi, Asemptomatik Duyarlılık mı? Spesifik IgE ve Hemogram Türevli İnflamatuar İndekslerin (NLR, PLR, SII, SIRI) Ayırt Edici Rolü",
+          "sp": "Hande Üçler Çınar"
+        },
+        {
+          "time": "S-55",
+          "title": "Çanakkale Bölgesinde Çocuklarda Aeroalerjen Duyarlılık Profili ve İlişkili Faktörler",
+          "sp": "Eren Sarı"
+        }
+      ]
     }
   ],
-  "activities": [
-    {
-      "id": "efes-2026",
-      "title": "Efes Antik Kenti Gezisi",
-      "emoji": "🏛️",
-      "color": "#8B31D6",
-      "soft": "#F2E9FD",
-      "dateLabel": "18 Eylül Cuma",
-      "location": "Efes / Selçuk",
-      "description": "Sempozyum kapsamında düzenlenecek Efes Antik Kenti gezisine katılmak isteyenlerin kaydı alınmaktadır. Ayrıntılar kayıt olanlara ayrıca duyurulacaktır.",
-      "status": "open",
-      "consentText": "Ad, soyad ve telefon bilgilerimin bu etkinliğin organizasyonu amacıyla işlenmesine onay veriyorum.",
-      "consentUrl": "https://okansay.github.io/gpais-gizlilik/"
-    },
-    {
-      "id": "voleybol-2026",
-      "title": "Plaj Voleybolu",
-      "emoji": "🏐",
-      "color": "#F0821E",
-      "soft": "#FDEEDD",
-      "dateLabel": "19 Eylül Cumartesi",
-      "timeLabel": "Akşam",
-      "location": "Pine Bay Plajı",
-      "description": "Cumartesi akşamı düzenlenecek plaj voleybolu etkinliğine katılmak isteyenlerin kaydı alınmaktadır.",
-      "status": "open",
-      "consentText": "Ad, soyad ve telefon bilgilerimin bu etkinliğin organizasyonu amacıyla işlenmesine onay veriyorum.",
-      "consentUrl": "https://okansay.github.io/gpais-gizlilik/"
-    }
-  ],
+  "activities": [],
   "committee": {
     "leadership": [
       {
