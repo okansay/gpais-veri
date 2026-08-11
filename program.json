@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "version": 10,
-  "generatedAt": "2026-08-10T06:56:46.798Z",
+  "version": 11,
+  "generatedAt": "2026-08-11T07:41:52.708Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
   "meta": {
@@ -768,7 +768,7 @@
       "title": "Sözlü Bildiriler: İlaç Alerjisi",
       "chairsLabel": "Oturum Başkanları",
       "chairs": [
-        "Doç. Dr. Aylin Kont",
+        "Doç. Dr. Hakan Güvenir",
         "Doç. Dr. Ahmet Selmanoğlu"
       ],
       "talks": [
@@ -876,7 +876,7 @@
       "chairsLabel": "Oturum Başkanları",
       "chairs": [
         "Doç. Dr. Nurhan Aruçi Kasap",
-        "Doç. Dr. İlknur Kökçü Karadağ"
+        "Uzm. Dr. Mehmet Kılıç"
       ],
       "talks": [
         {
