@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "version": 11,
-  "generatedAt": "2026-08-11T07:41:52.708Z",
+  "version": 12,
+  "generatedAt": "2026-08-11T08:22:44.985Z",
   "minAppVersion": "1.1.0",
   "tz": "+03:00",
   "meta": {
@@ -875,8 +875,8 @@
       "title": "Sözlü Bildiriler: İmmünoloji",
       "chairsLabel": "Oturum Başkanları",
       "chairs": [
-        "Doç. Dr. Nurhan Aruçi Kasap",
-        "Uzm. Dr. Mehmet Kılıç"
+        "Prof. Dr. Mehmet Kılıç",
+        "Doç. Dr. Nurhan Aruçi Kasap"
       ],
       "talks": [
         {
