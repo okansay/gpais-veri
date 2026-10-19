@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CongressGo — Kongre Yönetimi</title>
+<style>
+  :root{
+    --teal:#0FA79A; --tealDark:#0C8478; --tealSoft:#E0F5F2; --ink:#14224E; --slate:#37456B;
+    --gray:#7A869E; --line:#E4E8F0; --bg:#F4F7FB; --pink:#E0218A; --red:#C0392B; --green:#2FB457;
+    --redSoft:#FDEDED; --greenSoft:#E4F6E9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+  h1{font-size:22px;margin:0 0 4px}
+  .sub{color:var(--gray);font-size:13px;margin:0 0 18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px;box-shadow:0 6px 16px rgba(20,34,78,.05)}
+  .card h2{font-size:14px;letter-spacing:.3px;text-transform:uppercase;color:var(--gray);margin:0 0 12px}
+  label{display:block;font-size:12px;color:var(--slate);margin:10px 0 4px;font-weight:600}
+  input[type=text],input[type=password],textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:14px;font-family:inherit;background:var(--bg);color:var(--ink)}
+  textarea{min-height:150px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;white-space:pre;resize:vertical}
+  button{border:0;border-radius:10px;padding:11px 16px;font-size:14px;font-weight:700;cursor:pointer;background:var(--teal);color:#fff}
+  button:hover{background:var(--tealDark)}
+  button.ghost{background:#fff;color:var(--teal);border:1.5px solid var(--teal)}
+  button.danger{background:var(--redSoft);color:var(--red);border:1px solid #F5C2C2}
+  button:disabled{opacity:.5;cursor:default}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .note{font-size:12px;color:var(--gray);margin-top:8px}
+  .warn{background:#FFF7E6;border:1px solid #F3E2B3;border-radius:10px;padding:10px 12px;font-size:12.5px;color:#8A6D1A;margin-top:10px}
+  .err{background:var(--redSoft);border:1px solid #F5C2C2;border-radius:10px;padding:10px 12px;font-size:13px;color:var(--red);margin-top:10px;white-space:pre-wrap}
+  .ok{background:var(--greenSoft);border:1px solid #BBE6C7;border-radius:10px;padding:10px 12px;font-size:13px;color:#1C7A3A;margin-top:10px}
+  .cong{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+  .cong img,.cong .ph{width:44px;height:44px;border-radius:10px;object-fit:contain;background:var(--tealSoft);flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:800}
+  .cong .meta{flex:1;min-width:0}
+  .cong .nm{font-weight:800;font-size:14px}
+  .cong .dt{color:var(--teal);font-size:12px;font-weight:700;margin-top:2px}
+  .cong .id{color:var(--gray);font-size:11px;margin-top:2px;word-break:break-all}
+  .muted{color:var(--gray);font-size:13px}
+  a{color:var(--teal)}
+  .sum{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;margin-top:10px}
+  .sum b{color:var(--ink)}
+  .spin{opacity:.6;pointer-events:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>CongressGo — Kongre Yönetimi</h1>
+  <p class="sub">Katalog: <code>okansay/gpais-veri</code> · Eklenen kongreleri gör, sil, yeni kongre ekle.</p>
+
+  <!-- Erişim anahtarı -->
+  <div class="card">
+    <h2>GitHub erişim anahtarı</h2>
+    <p class="muted">Yalnızca <b>okansay/gpais-veri</b> deposuna <b>Contents: Read and write</b> izni olan bir fine-grained token. Yalnızca bu tarayıcıda saklanır, sadece api.github.com'a gönderilir.</p>
+    <label>Token (ghp_… / github_pat_…)</label>
+    <input id="tok" type="password" placeholder="github_pat_..." autocomplete="off" />
+    <div class="row" style="margin-top:10px">
+      <button id="saveTok">Kaydet & Bağlan</button>
+      <button id="clearTok" class="ghost">Anahtarı sil</button>
+      <span id="tokState" class="muted"></span>
+    </div>
+    <div class="warn">Bu sayfa herkese açık olabilir; yazma yetkisi yalnızca anahtarı girende olur. Anahtarını kimseyle paylaşma, ekran görüntüsüne alma.</div>
+  </div>
+
+  <!-- Kongre listesi -->
+  <div class="card">
+    <div class="row" style="justify-content:space-between">
+      <h2 style="margin:0">Kayıtlı kongreler (<span id="count">—</span>)</h2>
+      <button id="refresh" class="ghost">Yenile</button>
+    </div>
+    <div id="list" style="margin-top:12px"><p class="muted">Anahtarı girip "Yenile"ye bas.</p></div>
+    <div id="listMsg"></div>
+  </div>
+
+  <!-- Yeni kongre -->
+  <div class="card">
+    <h2>Yeni kongre ekle</h2>
+    <p class="muted">Yapay zekadan (CongressGo talimatıyla) aldığın içe aktarma paketini (<code>{ "congress": {…}, "program": {…} }</code>) buraya yapıştır. Doğrulanıp katalog'a eklenir; gün tarihleri gerekiyorsa başlangıç tarihinden onarılır.</p>
+    <label>İçe aktarma paketi (JSON)</label>
+    <textarea id="bundle" placeholder='{ "congress": { "name": "...", "startDate": "2026-11-05", "endDate": "2026-11-07" }, "program": { "days": [...], "tracks": {...}, "sessions": [...] } }'></textarea>
+    <div class="row" style="margin-top:10px">
+      <button id="validate" class="ghost">Doğrula</button>
+      <button id="publish" disabled>Katalog'a ekle ve yayınla</button>
+    </div>
+    <div id="addMsg"></div>
+  </div>
+
+  <p class="muted">Değişiklikler birkaç dakika içinde uygulamada görünür (GitHub Pages + uygulamanın katalog yenilemesi).</p>
+</div>
+
+<script>
+const OWNER="okansay", REPO="gpais-veri", BRANCH="main";
+const PAGES="https://okansay.github.io/gpais-veri";
+const API=`https://api.github.com/repos/${OWNER}/${REPO}/contents/`;
+const TOK_KEY="cg_admin_gh_token";
+const HHMM=/^([01]\d|2[0-3]):[0-5]\d$/;
+const ISO=/^\d{4}-\d{2}-\d{2}$/;
+const KINDS=["session","workshop","oral","satellite","break","lunch"];
+const TR_MS=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
+const TR_MF=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+const TR_WD=["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
+const $=id=>document.getElementById(id);
+
+// ---- küçük yardımcılar ----
+const isObj=v=>typeof v==="object"&&v!==null&&!Array.isArray(v);
+const str=v=>typeof v==="string"&&v.trim().length>0;
+const https=v=>typeof v==="string"&&v.startsWith("https://");
+function token(){return localStorage.getItem(TOK_KEY)||"";}
+function ghHeaders(){return {Authorization:`Bearer ${token()}`,Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"};}
+function b64enc(s){const b=new TextEncoder().encode(s);let bin="";b.forEach(x=>bin+=String.fromCharCode(x));return btoa(bin);}
+function b64dec(b){const bin=atob(String(b).replace(/\n/g,""));return new TextDecoder().decode(Uint8Array.from(bin,c=>c.charCodeAt(0)));}
+function slug(s){return String(s||"").replace(/[çğıöşüÇĞİÖŞÜ]/g,c=>({"ç":"c","ğ":"g","ı":"i","ö":"o","ş":"s","ü":"u","Ç":"c","Ğ":"g","İ":"i","Ö":"o","Ş":"s","Ü":"u"}[c]||c)).toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,32)||"kongre";}
+function addDays(iso,n){const d=new Date(`${iso}T12:00:00Z`);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);}
+function dayLabels(iso){const d=new Date(`${iso}T12:00:00Z`);return {label:`${d.getUTCDate()} ${TR_MS[d.getUTCMonth()]}`,full:`${d.getUTCDate()} ${TR_MF[d.getUTCMonth()]} ${d.getUTCFullYear()}`,weekday:TR_WD[d.getUTCDay()]};}
+function fmtRange(a,b){const x=new Date(`${a}T12:00:00Z`),y=new Date(`${b}T12:00:00Z`);const mA=TR_MS[x.getUTCMonth()],mB=TR_MS[y.getUTCMonth()];if(a===b)return `${x.getUTCDate()} ${mA} ${x.getUTCFullYear()}`;if(x.getUTCFullYear()===y.getUTCFullYear()&&x.getUTCMonth()===y.getUTCMonth())return `${x.getUTCDate()}–${y.getUTCDate()} ${mA} ${x.getUTCFullYear()}`;return `${x.getUTCDate()} ${mA} – ${y.getUTCDate()} ${mB} ${y.getUTCFullYear()}`;}
+
+// ---- GitHub Contents API ----
+async function ghGet(path){const r=await fetch(API+path+"?ref="+BRANCH,{headers:ghHeaders()});if(r.status===404)return {text:null,sha:null};if(!r.ok)throw new Error(`GET ${path}: ${r.status} ${await r.text()}`);const j=await r.json();return {text:b64dec(j.content),sha:j.sha};}
+async function ghPut(path,text,message,sha){const body={message,content:b64enc(text),branch:BRANCH};if(sha)body.sha=sha;const r=await fetch(API+path,{method:"PUT",headers:{...ghHeaders(),"Content-Type":"application/json"},body:JSON.stringify(body)});if(!r.ok)throw new Error(`PUT ${path}: ${r.status} ${await r.text()}`);return r.json();}
+async function ghDelete(path,message,sha){const r=await fetch(API+path,{method:"DELETE",headers:{...ghHeaders(),"Content-Type":"application/json"},body:JSON.stringify({message,sha,branch:BRANCH})});if(!r.ok)throw new Error(`DELETE ${path}: ${r.status} ${await r.text()}`);return r.json();}
+
+// ---- içe aktarma paketi doğrulama (src/lib/importSchema.ts + programSchema.ts karşılığı) ----
+const GENEL={label:"Genel",short:"Genel",color:"#2F6BE0",soft:"#E7EEFC"};
+const PAL=[{color:"#2F6BE0",soft:"#E7EEFC"},{color:"#8B31D6",soft:"#F2E9FD"},{color:"#0FA79A",soft:"#E0F5F2"},{color:"#F0821E",soft:"#FDEEDD"},{color:"#E0218A",soft:"#FCE7F3"}];
+function validateBundle(raw){
+  if(!isObj(raw))return {ok:false,reason:"JSON bir nesne değil"};
+  const c=raw.congress; if(!isObj(c))return {ok:false,reason:"'congress' bölümü eksik"};
+  const prog=isObj(raw.program)?raw.program:{};
+  const metaTitle=isObj(prog.meta)&&str(prog.meta.title)?prog.meta.title.trim():"";
+  const org0=str(c.org)?c.org.trim():"", city0=str(c.city)?c.city.trim():"";
+  if(!str(c.startDate)||!ISO.test(c.startDate))return {ok:false,reason:"congress.startDate geçersiz (yyyy-mm-dd)"};
+  if(!str(c.endDate)||!ISO.test(c.endDate))return {ok:false,reason:"congress.endDate geçersiz (yyyy-mm-dd)"};
+  if(c.endDate<c.startDate)return {ok:false,reason:"congress.endDate < startDate"};
+  const year0=c.startDate.slice(0,4);
+  const name=(str(c.name)?c.name.trim():"")||metaTitle||org0||(city0?`${city0} Kongresi ${year0}`:"")||"Kongrem";
+  const shortName=str(c.shortName)?c.shortName.trim():name.slice(0,18);
+  const warnings=[];
+  if(!str(c.name)&&!metaTitle)warnings.push(`Kongre adı boştu → "${name}" varsayıldı`);
+
+  // --- program normalize ---
+  const p={...prog}; p.schema=1; p.version=(typeof p.version==="number"&&p.version>0)?p.version:1;
+  if(!str(p.tz))p.tz="+03:00"; delete p.minAppVersion; delete p.endpoints;
+  // tracks
+  const tracks=isObj(p.tracks)?{...p.tracks}:{}; if(!tracks.genel)tracks.genel={...GENEL};
+  const sessions=Array.isArray(p.sessions)?p.sessions:[]; let pi=0;
+  for(const s of sessions){ if(isObj(s)&&!str(s.track))s.track="genel"; const t=isObj(s)&&str(s.track)?s.track:"genel"; if(!tracks[t]){const b=PAL[pi++%PAL.length];tracks[t]={label:t,short:t,color:b.color,soft:b.soft};} }
+  p.tracks=tracks; if(!Array.isArray(p.activities))p.activities=[];
+  // --- gün tarihi onarımı ---
+  const rawDays=Array.isArray(p.days)?p.days.filter(isObj):[];
+  if(rawDays.length<1)return {ok:false,reason:"program.days en az 1 öğe olmalı"};
+  const byN=[...rawDays].sort((a,b)=>(Number(a.n)||0)-(Number(b.n)||0));
+  const allValid=byN.every(d=>typeof d.date==="string"&&ISO.test(d.date));
+  const distinct=new Set(byN.map(d=>d.date)).size===byN.length;
+  let inc=true; for(let i=1;i<byN.length;i++){if(!(String(byN[i].date)>String(byN[i-1].date))){inc=false;break;}}
+  if(!allValid||!distinct||!inc){ byN.forEach((d,i)=>{const iso=addDays(c.startDate,i);d.date=iso;const L=dayLabels(iso);d.label=L.label;d.full=L.full;d.weekday=L.weekday;}); warnings.push("Gün tarihleri başlangıç tarihinden yeniden türetildi"); }
+  p.days=byN;
+  // --- program temel doğrulama ---
+  const seenN=new Set();
+  for(const d of byN){ const n=Number(d.n); if(!Number.isInteger(n))return {ok:false,reason:"gün n tam sayı değil"}; if(seenN.has(n))return {ok:false,reason:`yinelenen gün no: ${n}`}; seenN.add(n); if(!str(d.date)||!ISO.test(d.date))return {ok:false,reason:`gün ${n} tarih geçersiz`}; if(!str(d.label))d.label=dayLabels(d.date).label; if(!str(d.full))d.full=dayLabels(d.date).full; if(!str(d.weekday))d.weekday=dayLabels(d.date).weekday; }
+  const seenId=new Set(); let courses=0;
+  const normSessions=[];
+  for(const s of sessions){
+    if(!isObj(s))return {ok:false,reason:"oturum nesne değil"};
+    if(!str(s.id))return {ok:false,reason:"oturum id boş"};
+    if(seenId.has(s.id))return {ok:false,reason:`yinelenen oturum id: ${s.id}`}; seenId.add(s.id);
+    const day=Number(s.day); if(!seenN.has(day))return {ok:false,reason:`${s.id}: day ${s.day} days'te yok`};
+    if(!str(s.track)||!tracks[s.track])return {ok:false,reason:`${s.id}: track tanımsız`};
+    if(!str(s.start)||!HHMM.test(s.start))return {ok:false,reason:`${s.id}: start SS:DD değil`};
+    if(!str(s.end)||!HHMM.test(s.end))return {ok:false,reason:`${s.id}: end SS:DD değil`};
+    const kind=KINDS.includes(s.kind)?s.kind:"session"; if(kind==="workshop")courses++;
+    if(!str(s.title))return {ok:false,reason:`${s.id}: title boş`};
+    const o={id:s.id,day,track:s.track,start:s.start,end:s.end,kind,title:s.title.trim()};
+    if(str(s.room))o.room=s.room.trim();
+    if(str(s.parent))o.parent=s.parent.trim();
+    if(str(s.chairsLabel))o.chairsLabel=s.chairsLabel.trim();
+    if(Array.isArray(s.chairs)){const ch=s.chairs.filter(str).map(x=>x.trim());if(ch.length)o.chairs=ch;}
+    if(Array.isArray(s.talks)){const tk=[];for(const t of s.talks){if(!isObj(t)||!str(t.title))return {ok:false,reason:`${s.id}: talk.title boş`};tk.push({time:str(t.time)?t.time:"",title:t.title.trim(),sp:str(t.sp)?t.sp:""});}if(tk.length)o.talks=tk;}
+    normSessions.push(o);
+  }
+  if(normSessions.length<1)return {ok:false,reason:"en az 1 oturum olmalı"};
+
+  const program={schema:1,version:p.version,generatedAt:new Date().toISOString(),tz:p.tz,
+    meta:{title:name,shortTitle:shortName,motto:"",dates:fmtRange(c.startDate,c.endDate),venue:"",city:city0,org:org0,web:""},
+    days:byN.map(d=>({n:Number(d.n),date:d.date,label:d.label,full:d.full,weekday:d.weekday,tracks:Array.isArray(d.tracks)?d.tracks.filter(str):undefined})),
+    tracks,sessions:normSessions,activities:[],
+    committee:{leadership:[],board:{title:"",rows:[],members:[]},organizing:[],scientific:[]},hosts:[],contacts:[]};
+  const congress={name,shortName,org:org0||undefined,city:city0||undefined,
+    logo:https(c.logo)?c.logo:undefined,startDate:c.startDate,endDate:c.endDate};
+  return {ok:true,congress,program,stats:{days:byN.length,sessions:normSessions.length,courses},warnings};
+}
+
+// ---- durum ----
+let catalog=null, catalogSha=null, pending=null;
+
+function setTokState(){ const t=token(); $("tokState").textContent=t?("Bağlı — anahtar kayıtlı ("+t.slice(0,7)+"…)"):"Anahtar yok"; $("tok").value=t; }
+function msg(el,html,cls){ $(el).innerHTML=html?`<div class="${cls}">${html}</div>`:""; }
+
+async function loadList(){
+  if(!token()){ msg("listMsg","Önce erişim anahtarını kaydet.","err"); return; }
+  $("list").classList.add("spin"); msg("listMsg","");
+  try{
+    const {text,sha}=await ghGet("catalog.json");
+    if(text===null){ catalog={schema:1,version:1,congresses:[]}; catalogSha=null; }
+    else { catalog=JSON.parse(text); catalogSha=sha; }
+    render();
+  }catch(e){ msg("listMsg","Katalog okunamadı: "+e.message,"err"); }
+  finally{ $("list").classList.remove("spin"); }
+}
+
+function render(){
+  const list=catalog?.congresses||[];
+  $("count").textContent=list.length;
+  if(!list.length){ $("list").innerHTML='<p class="muted">Henüz kongre yok.</p>'; return; }
+  $("list").innerHTML=list.map(c=>`
+    <div class="cong">
+      ${c.logo?`<img src="${c.logo}" alt="">`:`<div class="ph">${(c.shortName||c.name||"?").slice(0,2).toUpperCase()}</div>`}
+      <div class="meta">
+        <div class="nm">${esc(c.name||"")}</div>
+        <div class="dt">${fmtRange(c.startDate,c.endDate)}${c.city?" · "+esc(c.city):""}</div>
+        <div class="id">${esc(c.id)} · <a href="${esc(c.programUrl||"")}" target="_blank" rel="noopener">program</a></div>
+      </div>
+      <button class="danger" data-del="${esc(c.id)}">Sil</button>
+    </div>`).join("");
+  document.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>delCongress(b.getAttribute("data-del")));
+}
+function esc(s){return String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));}
+
+async function delCongress(id){
+  const c=(catalog.congresses||[]).find(x=>x.id===id); if(!c)return;
+  if(!confirm(`"${c.name}" kongresini katalogdan sil? Program dosyası da silinecek.`))return;
+  $("list").classList.add("spin"); msg("listMsg","Siliniyor…","ok");
+  try{
+    // katalog girdisini çıkar
+    const fresh=await ghGet("catalog.json"); const cat=JSON.parse(fresh.text);
+    cat.congresses=(cat.congresses||[]).filter(x=>x.id!==id); cat.version=(Number(cat.version)||1)+1;
+    await ghPut("catalog.json",JSON.stringify(cat,null,2)+"\n",`admin: ${id} kongresini sil`,fresh.sha);
+    // ilgili program dosyası (yalnızca gpais-veri'de barınıyorsa)
+    const pfile=(c.programUrl||"").startsWith(PAGES+"/program-")?c.programUrl.slice(PAGES.length+1):null;
+    if(pfile){ try{ const pg=await ghGet(pfile); if(pg.sha)await ghDelete(pfile,`admin: ${pfile} sil`,pg.sha); }catch(_){} }
+    catalog=cat; catalogSha=null; render(); msg("listMsg",`"${c.name}" silindi.`,"ok");
+  }catch(e){ msg("listMsg","Silinemedi: "+e.message,"err"); }
+  finally{ $("list").classList.remove("spin"); }
+}
+
+function doValidate(){
+  pending=null; $("publish").disabled=true; msg("addMsg","");
+  let raw; try{ raw=JSON.parse($("bundle").value); }catch(e){ msg("addMsg","Geçersiz JSON: "+e.message,"err"); return; }
+  const res=validateBundle(raw);
+  if(!res.ok){ msg("addMsg","Doğrulama hatası: "+res.reason,"err"); return; }
+  // id ata (çakışmayı önle)
+  const year=res.congress.startDate.slice(0,4);
+  let base=`${slug(res.congress.shortName||res.congress.name)}-${year}`, id=base, i=2;
+  const ids=new Set((catalog?.congresses||[]).map(x=>x.id));
+  while(ids.has(id))id=`${base}-${i++}`;
+  pending={id,...res};
+  const w=res.warnings.length?`<div class="warn">${res.warnings.map(esc).join("<br>")}</div>`:"";
+  msg("addMsg",`<div class="sum"><b>${esc(res.congress.name)}</b> (${esc(res.congress.shortName)})<br>
+    ${fmtRange(res.congress.startDate,res.congress.endDate)}${res.congress.city?" · "+esc(res.congress.city):""}<br>
+    ${res.stats.days} gün · ${res.stats.sessions} oturum · ${res.stats.courses} kurs<br>
+    id: <code>${esc(id)}</code></div>${w}`,"");
+  $("addMsg").innerHTML+='<div class="ok">Doğrulandı. "Katalog\'a ekle ve yayınla" ile yayınlayabilirsin.</div>';
+  $("publish").disabled=false;
+}
+
+async function doPublish(){
+  if(!pending){ return; }
+  if(!token()){ msg("addMsg","Önce erişim anahtarını kaydet.","err"); return; }
+  $("publish").disabled=true; $("publish").classList.add("spin");
+  try{
+    const {id,congress,program}=pending;
+    const pfile=`program-${id}.json`;
+    const programUrl=`${PAGES}/${pfile}`;
+    // 1) program dosyasını yaz (varsa güncelle)
+    let psha=null; try{ const ex=await ghGet(pfile); psha=ex.sha; }catch(_){}
+    await ghPut(pfile,JSON.stringify(program,null,2)+"\n",`admin: ${id} programı`,psha);
+    // 2) katalog girdisini ekle (taze oku)
+    const fresh=await ghGet("catalog.json");
+    const cat=fresh.text?JSON.parse(fresh.text):{schema:1,version:1,congresses:[]};
+    cat.congresses=(cat.congresses||[]).filter(x=>x.id!==id);
+    cat.congresses.push({id,name:congress.name,shortName:congress.shortName,
+      ...(congress.org?{org:congress.org}:{}),...(congress.city?{city:congress.city}:{}),
+      ...(congress.logo?{logo:congress.logo}:{}),startDate:congress.startDate,endDate:congress.endDate,programUrl});
+    cat.version=(Number(cat.version)||1)+1;
+    await ghPut("catalog.json",JSON.stringify(cat,null,2)+"\n",`admin: ${id} kongresini ekle`,fresh.sha);
+    catalog=cat; catalogSha=null; pending=null; $("bundle").value="";
+    render(); msg("addMsg",`Eklendi ve yayınlandı: <b>${esc(congress.name)}</b>. Birkaç dakikada uygulamada görünür.`,"ok");
+  }catch(e){ msg("addMsg","Yayınlanamadı: "+e.message,"err"); $("publish").disabled=false; }
+  finally{ $("publish").classList.remove("spin"); }
+}
+
+// ---- olaylar ----
+$("saveTok").onclick=()=>{ const v=$("tok").value.trim(); if(!v){msg("listMsg","Anahtar boş.","err");return;} localStorage.setItem(TOK_KEY,v); setTokState(); loadList(); };
+$("clearTok").onclick=()=>{ localStorage.removeItem(TOK_KEY); setTokState(); $("list").innerHTML='<p class="muted">Anahtar silindi.</p>'; };
+$("refresh").onclick=loadList;
+$("validate").onclick=doValidate;
+$("publish").onclick=doPublish;
+
+setTokState();
+if(token())loadList();
+</script>
+</body>
+</html>
