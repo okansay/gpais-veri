@@ -1,17 +1,5 @@
 {
   "schema": 1,
-  "version": 2,
-  "congresses": [
-    {
-      "id": "test-future-2027",
-      "name": "CongressGo Demo Kongresi 2027",
-      "shortName": "DEMO 2027",
-      "org": "CongressGo",
-      "city": "İstanbul",
-      "startDate": "2027-05-10",
-      "endDate": "2027-05-12",
-      "programUrl": "https://okansay.github.io/gpais-veri/program.json",
-      "pushTag": "test-future-2027"
-    }
-  ]
+  "version": 3,
+  "congresses": []
 }
