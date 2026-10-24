@@ -1,19 +1,7 @@
 {
   "schema": 1,
-  "version": 1,
+  "version": 2,
   "congresses": [
-    {
-      "id": "gpais-2026",
-      "name": "8. Genç Pediatrik Alerjistler ve İmmünolojistler Sempozyumu",
-      "shortName": "GPAIS 2026",
-      "org": "Çocuk Alerji, İmmünoloji ve Astım Derneği",
-      "logo": "https://gpais.org/wp-content/uploads/2025/07/cropped-gpad-270x270.png",
-      "city": "Kuşadası",
-      "startDate": "2026-09-18",
-      "endDate": "2026-09-20",
-      "programUrl": "https://okansay.github.io/gpais-veri/program.json",
-      "pushTag": "gpais-2026"
-    },
     {
       "id": "test-future-2027",
       "name": "CongressGo Demo Kongresi 2027",
